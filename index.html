@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projeto simples utilizando microfrontends">
+    <meta name="author" content="Nataniel Paiva">
+
+    <script src="/dist/common-dependencies.js"></script>
+    <script src="/dist/root-application.js"></script>
+
+    <title>Exemplo de microfrontends utilizando Single SPA.</title>
+
+    <link href="https://getbootstrap.com.br/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://getbootstrap.com.br/docs/4.1/examples/navbar-static/navbar-top.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#">Monolítico principal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" onclick="singleSpaNavigate('/app-angular')">
+              Microfrontend Angular
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="singleSpaNavigate('/app-react')">
+              Microfrontend React
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </body>
+</html>
